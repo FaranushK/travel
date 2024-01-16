@@ -344,6 +344,8 @@ body {
   bottom: 0;
   left: 0;
 }
+
+
 /* Places styles end */
 
 @media screen and (max-width:767px) {
@@ -360,6 +362,12 @@ body {
     background-color: #000;
     z-index: 10;
     padding: 75px;
+    transform: translateX(100%);
+  }
+
+  .header__nav_active {
+    transform: translateX(0);
+    transition: .2s all linear;
   }
 
   .header__item {
@@ -377,7 +385,30 @@ body {
     line-height: 48px;
   }
 
-  
+  .header__nav-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index:11;
+  }
+
+  .header__nav-close-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+  }
+
+  .header__nav-close-line:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .header__nav-close-line:last-child {
+    transform: translateY(-50%) rotate(-45deg);
+  }
 }
 
 
