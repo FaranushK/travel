@@ -345,7 +345,9 @@ body {
   left: 0;
 }
 
-
+.header__nav-close-line {
+  display: none;
+}
 /* Places styles end */
 
 @media screen and (max-width:767px) {
@@ -385,7 +387,17 @@ body {
     line-height: 48px;
   }
 
-  .header__nav-close {
+  .header__nav-close { /* крестик не появляется на экране */
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index:11;
+  }
+  .header__nav-close_active { /* класс - состояние, при появлении добавлении этого класса к header__nav-close */
+    display: block;
     width: 40px;
     height: 40px;
     position: absolute;
